@@ -1,0 +1,9 @@
+.metadata/
+Servers/
+RemoteSystemsTempFiles/
+game-backend/.settings/
+game-backend/gradlew.bat
+game-backend/build.gradle
+game-backend/.classpath
+game-backend/gradlew
+game-backend/gradle/

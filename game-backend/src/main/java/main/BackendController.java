@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class BackendController 
 {
     // A map can be a map for a single screen or for an entire world.
-	@RequestMapping("/map")
+	@RequestMapping("/world")
     public ResponseEntity<String> getMap(   
     	@RequestParam(value="world_id") int worldId,
     	@RequestParam(value="screen_id") int screenId)    	    	

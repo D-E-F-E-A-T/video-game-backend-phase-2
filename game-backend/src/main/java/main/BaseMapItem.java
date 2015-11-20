@@ -1,9 +1,9 @@
 package main;
 
 
-import org.codehaus.jackson.JsonGenerationException;
-import org.codehaus.jackson.map.JsonMappingException;
-import org.codehaus.jackson.map.ObjectMapper;
+//import org.codehaus.jackson.JsonGenerationException;
+//import org.codehaus.jackson.map.JsonMappingException;
+//import org.codehaus.jackson.map.ObjectMapper;
 
 //@Entity // This is a JPA entity.
 //@Table(name = "MapItem")

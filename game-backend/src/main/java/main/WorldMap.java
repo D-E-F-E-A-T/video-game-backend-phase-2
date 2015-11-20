@@ -5,7 +5,7 @@ import java.util.Hashtable;
 import java.util.Iterator;
 import java.util.Set;
 
-import org.codehaus.jackson.map.ObjectMapper;
+//import org.codehaus.jackson.map.ObjectMapper;
 
 public class WorldMap 
 {
@@ -31,9 +31,10 @@ public class WorldMap
 	
 	@Override
 	public String toString()
-	{
+	{		
 		String retVal = "";
-		
+	
+/*		
 		ObjectMapper mapper = new ObjectMapper();
 		
 		try
@@ -51,6 +52,7 @@ public class WorldMap
 		{
 			
 		}
+*/		
 		
 		return retVal;
 	}

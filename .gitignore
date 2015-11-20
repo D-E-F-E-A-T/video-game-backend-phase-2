@@ -9,3 +9,4 @@ game-backend/gradlew
 game-backend/gradle/
 gs-accessing-mongodb-data-rest-initial/.settings/
 gs-accessing-mongodb-data-rest-complete/.settings/
+.recommenders/

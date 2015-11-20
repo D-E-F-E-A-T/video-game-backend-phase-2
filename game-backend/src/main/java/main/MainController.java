@@ -20,22 +20,25 @@ public class MainController
 //	@Autowired
 //	private WorldRepository worldRepository;
 
-//	@Autowired
-//	private UserRepository userRepository;
+	@Autowired
+	private UserRepository userRepository;
 
 
-	
+	// curl -X POST "http://localhost:8085/user" -d "first_name=Bob&last_name=Barker"
 	@RequestMapping(value = "/user", method = RequestMethod.POST)
 	public ResponseEntity<String> createUser(
-		@RequestParam(value="last_name") String lastName)
+		@RequestParam(value = "token") String token,
+		@RequestParam(value = "last_name") String lastName,
+		@RequestParam(value = "first_name") String firstName)
 	{
+		// TODO: Put request into queue.
 		EntityManagerFactory entityManagerFactory;		
 		entityManagerFactory = Persistence.createEntityManagerFactory("userPu");
 		EntityManager entityManager = entityManagerFactory.createEntityManager();
 
 		entityManager.getTransaction().begin();
 
-		User user = new User(lastName, lastName);
+		User user = new User(firstName, lastName);
 		
 		entityManager.persist(user);
 		entityManager.getTransaction().commit();
@@ -43,14 +46,14 @@ public class MainController
 		
 		
     	return new ResponseEntity<String>(
-        		lastName , // "hello", //worldMap.toString(), 
+        		user.getId(), 
         		HttpStatus.OK);		
 	}
 	
-	@RequestMapping(value = "/world", method = RequestMethod.POST)
-    public ResponseEntity<String> createWorld(   
-    	@RequestParam(value="world_id") int worldId)    	    	
-    {
+//	@RequestMapping(value = "/world", method = RequestMethod.POST)
+//    public ResponseEntity<String> createWorld(   
+//    	@RequestParam(value = "id") String id)    	    	
+//    {
 //		repository.deleteAll();
 
 		// save a couple of customers
@@ -74,8 +77,18 @@ public class MainController
     	}
 */    	
     	
+//    	return new ResponseEntity<String>(
+//    		"hello", //worldMap.toString(), 
+//    		HttpStatus.OK);
+//    }
+	
+	@RequestMapping(value = "/world", method = RequestMethod.GET)
+	public ResponseEntity<String> getWorld(
+		@RequestParam(value = "token") String token,
+		@RequestParam(value = "id") String id)
+	{
     	return new ResponseEntity<String>(
-    		"hello", //worldMap.toString(), 
-    		HttpStatus.OK);
-    }
+        		"hello", //worldMap.toString(), 
+        		HttpStatus.OK);	
+	}
 }

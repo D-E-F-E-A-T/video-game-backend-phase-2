@@ -12,17 +12,17 @@ public class WorldMap
 	private int numItemsPerRow = 0;
 	private int numItemsPerColumn = 0;
 	
-	private Hashtable<Integer, BaseMapItem> items = null;
+	private Hashtable<Integer, BaseSpace> items = null;
 	
 	public WorldMap(int numItemsPerRow, int numItemsPerColumn)
 	{
 		this.numItemsPerRow = numItemsPerRow;
 		this.numItemsPerColumn = numItemsPerColumn;
 		
-		items = new Hashtable<Integer, BaseMapItem>();
+		items = new Hashtable<Integer, BaseSpace>();
 	}
 	
-	public void set(int row, int column, BaseMapItem item)
+	public void set(int row, int column, BaseSpace item)
 	{
 		items.put(
 			this.numItemsPerRow * row + column, 

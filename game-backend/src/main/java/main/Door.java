@@ -1,6 +1,6 @@
 package main;
 
-public class Door extends BaseMapItem 
+public class Door extends BaseSpace 
 {
 	public Door()
 	{

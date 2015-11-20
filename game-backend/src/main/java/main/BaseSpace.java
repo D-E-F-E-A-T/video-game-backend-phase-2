@@ -1,33 +1,28 @@
 package main;
 
 
-//import org.codehaus.jackson.JsonGenerationException;
-//import org.codehaus.jackson.map.JsonMappingException;
-//import org.codehaus.jackson.map.ObjectMapper;
 
-//@Entity // This is a JPA entity.
-//@Table(name = "MapItem")
-public abstract class BaseMapItem 
+public abstract class BaseSpace 
 {
-//	@Id
-//	@GeneratedValue(strategy = GenerationType.AUTO)
-//	protected int id;
-	
-//	@NotNull
-	protected int row;
-	
-//	@NotNull
-	protected int column;
-	
-//	@NotNull
+    @Id
+    @GeneratedValue(generator = "uuid")
+    @GenericGenerator(name = "uuid", strategy = "uuid2")
+    private String id;
+
+	protected String world;	
+	protected String region;    
+	protected int row;	
+	protected int column;	
 	protected int type;
 	
-	public BaseMapItem()
+	public BaseSpace()
 	{		
 	}
 	
-	public BaseMapItem(int row, int column)
+	public BaseSpace(String world, String region, int row, int column)
 	{
+		this.world = world;
+		this.region = region;
 		this.row = row;
 		this.column = column;
 	}
@@ -60,6 +55,30 @@ public abstract class BaseMapItem
 	public void setType(int type)
 	{
 		this.type = type;
+	}
+
+	public String getId() {
+		return id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
+	}
+
+	public String getRegion() {
+		return region;
+	}
+
+	public void setRegion(String region) {
+		this.region = region;
+	}
+
+	public String getWorld() {
+		return world;
+	}
+
+	public void setWorld(String world) {
+		this.world = world;
 	}	
 	
 }

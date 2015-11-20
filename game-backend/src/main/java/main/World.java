@@ -14,8 +14,8 @@ public class World
 	@GenericGenerator(name = "uuid", strategy = "uuid2")
 	private String id;
 	
-//	@OneToMany(mappedBy +
-//	private Set<Region> regions = new HashSet<>();
+	@OneToMany(mappedBy = "world", cascade = CascadeType.PERSIST)
+	private Set<Region> regions = new HashSet<>();
 	
 	World()
 	{		

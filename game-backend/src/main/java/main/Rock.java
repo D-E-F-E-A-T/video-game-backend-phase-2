@@ -1,6 +1,6 @@
 package main;
 
-public class Rock extends BaseMapItem 
+public class Rock extends BaseSpace 
 {
 	public Rock()
 	{

@@ -1,6 +1,6 @@
 package main;
 
-public class Water extends BaseMapItem 
+public class Water extends BaseSpace 
 {
 	public Water()
 	{

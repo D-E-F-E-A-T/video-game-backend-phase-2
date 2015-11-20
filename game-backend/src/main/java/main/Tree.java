@@ -1,15 +1,20 @@
 package main;
 
-public class Tree extends BaseMapItem 
+@Entity
+public class Tree extends BaseSpace 
 {
 	public Tree()
 	{
 	
 	}
 	
-	public Tree(int row, int column)
+	public Tree(
+		String world,
+		String region,
+		int row, 
+		int column)
 	{
-		super(row, column);
+		super(world, region, row, column);
 		this.type = Constants.TREE;
 	}
 }

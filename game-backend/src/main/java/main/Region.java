@@ -1,5 +1,10 @@
 package main;
 
+import org.hibernate.annotations.GenericGenerator;
+
+import javax.persistence.*;
+import java.util.List;
+
 @Entity
 public class Region 
 {
@@ -10,4 +15,11 @@ public class Region
 	
 	@ManyToOne
 	private World world;
+
+	@ElementCollection
+	@OrderColumn(name = "stackNo")
+	private List<Space> spaces;
+
+	public Region() {}
+
 }

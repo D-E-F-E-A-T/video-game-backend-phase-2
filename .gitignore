@@ -10,3 +10,5 @@ game-backend/gradle/
 gs-accessing-mongodb-data-rest-initial/.settings/
 gs-accessing-mongodb-data-rest-complete/.settings/
 .recommenders/
+game-backend/.idea/
+*.iml

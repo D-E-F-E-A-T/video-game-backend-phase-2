@@ -1,5 +1,7 @@
 package main;
 
+import javax.persistence.Entity;
+
 @Entity
 public class Tree extends BaseSpace 
 {

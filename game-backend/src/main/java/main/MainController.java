@@ -27,7 +27,7 @@ public class MainController
 	// curl -X POST "http://localhost:8085/user" -d "first_name=Bob&last_name=Barker"
 	@RequestMapping(value = "/user", method = RequestMethod.POST)
 	public ResponseEntity<String> createUser(
-		@RequestParam(value = "token") String token,
+//		@RequestParam(value = "token") String token,
 		@RequestParam(value = "last_name") String lastName,
 		@RequestParam(value = "first_name") String firstName)
 	{

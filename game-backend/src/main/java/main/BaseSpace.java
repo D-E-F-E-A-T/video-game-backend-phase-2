@@ -1,8 +1,12 @@
 package main;
 
 
+import org.hibernate.annotations.GenericGenerator;
 
-public abstract class BaseSpace 
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+public abstract class BaseSpace
 {
     @Id
     @GeneratedValue(generator = "uuid")
